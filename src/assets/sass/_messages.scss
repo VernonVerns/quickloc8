@@ -1,0 +1,108 @@
+#messages {
+    .header-part {
+        display: grid;
+        grid-template-columns: 8vw auto;
+        align-items: center;
+        padding: 2.5em 1em;
+
+        a {
+            font-size: 20px;
+            color: $secondary-color;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 30px;
+            font-weight: 500;
+        }
+    }
+
+    .search-container {
+        padding: 0 1em;
+        margin-bottom: 2em;
+
+        .search {
+            position: relative;
+            border: 0;
+
+            .fa-search {
+                position: absolute;
+                top: 23px;
+                left: 18px;
+                color: $secondary-color;
+            }
+
+            input {
+                height: 60px;
+                text-indent: 40px;
+                border-radius: 15px;
+                border: 1px solid #f2f2f2;
+                width: 100%;
+                font-size: 16px;
+                color: $secondary-color;
+                outline: none;
+
+                &:focus {
+                    box-shadow: none;
+                    border: 1px solid $secondary-color;
+                }
+            }
+        }
+    }
+
+    .messages {
+        padding: 0 1em;
+
+        .single-message {
+            background-color: rgba(255, 87, 34, 0.02);
+            border: 1px solid #fcfcfc;
+            padding: 0.75em 1em;
+            margin-bottom: 0.5em;
+            border-radius: 15px;
+            display: grid;
+            grid-template-columns: 18vw auto auto;
+
+            .profile-image {
+                align-self: center;
+                height: 60px;
+                width: 60px;
+                border-radius: 100%;
+                // background-color: $primary-color;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                h4 {
+                    margin: 0;
+                    font-size: 22px;
+                    color: $white-color;
+                }
+            }
+
+            .middle-part {
+                align-self: center;
+
+                h2 {
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: $secondary-color;
+                }
+
+                p {
+                    width: 220px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-size: 15px;
+                    color: #b3b3b3;
+                    margin: 0;
+                }
+            }
+
+            .date {
+                justify-self: flex-end;
+                font-size: 14px;
+            }
+        }
+    }
+}

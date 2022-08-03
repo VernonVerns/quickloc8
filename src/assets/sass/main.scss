@@ -32,7 +32,8 @@ $transition: all 0.65s ease-in-out;
 
     .message-btn {
         justify-self: right;
-        color: $primary-color;
+        color: $secondary-color;
+        font-size: 20px;
     }
 }
 
@@ -95,3 +96,5 @@ $transition: all 0.65s ease-in-out;
         transition: $transition;
     }
 }
+
+@import 'messages';

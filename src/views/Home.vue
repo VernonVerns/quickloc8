@@ -2,7 +2,7 @@
 export default {
 	data() {
 		return {
-			center: { lat: -38.637083, lng: 24.9226386 },
+			center: { lat: -33.876115, lng: 18.5008116 },
 			markers: [
 				{
 					position: {
@@ -51,11 +51,13 @@ export default {
 			<router-link to="/" class="nav-brand-img"><img src="../assets/img/quickloc8.svg" alt=""></router-link>
 			<router-link to="/messages" class="message-btn"><i class="fa fa-comment-alt"></i></router-link>
 		</div>
-
+		<div class="">
+			<h3>Track your taxi</h3>
+			<p>Track each movement of your taxi, where it is all the time and trips it made</p>
+		</div>
 		<GMapMap :center="center" :zoom="10" map-type-id="terrain" style="width: 100vw; height: 60vh">
 			<GMapCluster :zoomOnClick="true">
-				<GMapMarker :key="index" v-for="(m, index) in markers" :position="m.position" :heading="m.heading"
-					:clickable="true" :draggable="false" @click="center = m.position" />
+				<GMapMarker :key="index" v-for="(m, index) in markers" :position="m.position" :clickable="true" :draggable="false" @click="center = m.position" />
 			</GMapCluster>
 		</GMapMap>
 	</div>
