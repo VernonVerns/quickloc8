@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+$fa-font-path: '../../../node_modules/@fortawesome/fontawesome-free/webfonts';
+
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims.scss';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+
+$white-color: #ffffff;
+$primary-color: #FF5722;
+$secondary-color: #2e302f;
+$error-color: #fe2a39;
+$black-color: #000000;
+$grey-text-color: #b3b3b3;
+$transition: all 0.65s ease-in-out;
+
+.navigation {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    padding: 1em 1.5em;
+
+    .nav-brand-img {
+        justify-self: left;
+        
+        img {
+            width: 100px;
+        }
+    }
+
+    .message-btn {
+        justify-self: right;
+        color: $primary-color;
+    }
+}
+
+#splash_screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: $secondary-color;
+    transition: $transition;
+
+    .content {
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        justify-content: center;
+        align-content: center;
+        transition: $transition;
+        animation-name: loader-animation;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+
+        img {
+            width: 180px;
+        }
+    }
+}
+
+@keyframes loader-animation {
+    0% {
+        transform: scale(0.98);
+        transition: $transition;
+    }
+
+    20% {
+        transform: initial;
+        transition: $transition;
+    }
+
+    40% {
+        transform: scale(0.60);
+        transition: $transition;
+    }
+
+    60% {
+        transform: initial;
+        transition: $transition;
+    }
+
+    80% {
+        transform: scale(0.98);
+        transition: $transition;
+    }
+
+    100% {
+        transform: scale(1.2);
+        transition: $transition;
+    }
+}
