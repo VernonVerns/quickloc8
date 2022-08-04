@@ -65,6 +65,24 @@ $transition: all 0.65s ease-in-out;
     }
 }
 
+#home_page {
+    .short-desc {
+        padding: 3em 1em;
+
+        h3 {
+            font-size: 30px;
+            color: $secondary-color;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            font-size: 16px;
+            color: $secondary-color;
+            margin-bottom: 0;
+        }
+    }
+}
+
 @keyframes loader-animation {
     0% {
         transform: scale(0.98);

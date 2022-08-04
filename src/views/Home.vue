@@ -1,4 +1,5 @@
 <script>
+import taxiIcon from '../assets/img/ic_new_white_taxi.png'
 export default {
 	data() {
 		return {
@@ -51,13 +52,11 @@ export default {
 			<router-link to="/" class="nav-brand-img"><img src="../assets/img/quickloc8.svg" alt=""></router-link>
 			<router-link to="/messages" class="message-btn"><i class="fa fa-comment-alt"></i></router-link>
 		</div>
-		<div class="">
-			<h3>Track your taxi</h3>
-			<p>Track each movement of your taxi, where it is all the time and trips it made</p>
-		</div>
 		<GMapMap :center="center" :zoom="10" map-type-id="terrain" style="width: 100vw; height: 60vh">
 			<GMapCluster :zoomOnClick="true">
-				<GMapMarker :key="index" v-for="(m, index) in markers" :position="m.position" :clickable="true" :draggable="false" @click="center = m.position" />
+				<GMapMarker :key="index" v-for="(m, index) in markers" :position="m.position" :clickable="true"
+					:draggable="false" @click="center = m.position"
+					:icon="taxiIcon" />
 			</GMapCluster>
 		</GMapMap>
 	</div>
